@@ -1,0 +1,23 @@
+version: '3.8'
+
+services:
+  # PostgreSQL Database
+  postgres:
+    image: postgres:latest
+    environment:
+      POSTGRES_DB: stc_database
+      POSTGRES_USER: test
+      POSTGRES_PASSWORD: password
+    ports:
+      - "5432:5432"  # Map host machine's port 5432 to the container's port 5432
+    volumes:
+      - ./database_setup_file.sql:/docker-entrypoint-initdb.d/database_setup_file.sql  # Mount SQL script to container
+
+  # Java Application
+  app:
+    build:
+      context: .  # Build context is the current directory
+    ports:
+      - "8080:8080"  # Map host machine's port 8080 to the container's port 8080
+    depends_on:
+      - postgres  # Ensure the PostgreSQL container is running before starting the app
