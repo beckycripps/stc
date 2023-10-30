@@ -1,0 +1,102 @@
+{
+  "info": {
+    "_postman_id": "b700d060-4bb8-4c93-9b51-9421cec7264a",
+    "name": "Save The Children",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+    "_exporter_id": "30743088"
+  },
+  "item": [
+    {
+      "name": "Add User Details",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"John Doe\",\n    \"email\": \"sid@example.com\",\n    \"password\": \"password123\",\n    \"address\": \"123 Main St\",\n    \"donationAmount\": 100.50\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/api/user"
+      },
+      "response": []
+    },
+    {
+      "name": "Get User Details",
+      "protocolProfileBehavior": {
+        "disableBodyPruning": true
+      },
+      "request": {
+        "method": "GET",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"password\": \"password123\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/api/user/sid@example.com"
+      },
+      "response": []
+    },
+    {
+      "name": "Delete User",
+      "protocolProfileBehavior": {
+        "disabledSystemHeaders": {
+          "content-type": true
+        }
+      },
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json",
+            "type": "text"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"password\": \"password123\"\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/api/user/sid@example.com"
+      },
+      "response": []
+    },
+    {
+      "name": "Update user",
+      "request": {
+        "method": "PUT",
+        "header": [],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n    \"name\": \"Johnny Doe\",\n    \"email\": \"sid@example.com\",\n    \"password\": \"password123\",\n    \"address\": \"123 High St\",\n    \"donationAmount\": 200.75\n}\n",
+          "options": {
+            "raw": {
+              "language": "json"
+            }
+          }
+        },
+        "url": "http://localhost:8080/api/user"
+      },
+      "response": []
+    }
+  ]
+}

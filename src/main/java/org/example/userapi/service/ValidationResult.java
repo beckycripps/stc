@@ -3,7 +3,7 @@ package org.example.userapi.service;
 public class ValidationResult {
 
     private boolean isValid;
-    private String errorMessages;
+    private final String errorMessages;
 
     public ValidationResult(boolean isValid, String errorMessages) {
         this.isValid = isValid;

@@ -18,10 +18,9 @@ public class UserDetailTest {
     @Test
     public void testToDTO() throws Exception {
         // Arrange
+        UserDetail userDetail = new UserDetail();//should be the data that is stored in the database
 
-
-        UserDetail userDetail = new UserDetail();
-
+        //create the encrypted and hashed userDetails that should have been stored in the database
         userDetail.setEmail("test@example.com");
         userDetail.setPassword("hashedPassword");
         userDetail.setName(encrypt("Name"));

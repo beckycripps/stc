@@ -8,6 +8,9 @@ import org.hibernate.annotations.OnDeleteAction;
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
+/**
+ *
+ */
 @Data
 @Entity
 @Table(name = "donations")

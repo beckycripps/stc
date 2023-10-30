@@ -26,7 +26,7 @@ SET default_table_access_method = heap;
 -- -- Connect to the newly created database
 -- \c stc_database;
 
-CREATE ROLE test WITH LOGIN SUPERUSER PASSWORD 'password';
+-- CREATE ROLE test WITH LOGIN SUPERUSER PASSWORD 'password';
 --
 -- Name: user_table; Type: TABLE; Schema: public; Owner: test
 --
@@ -34,11 +34,12 @@ CREATE ROLE test WITH LOGIN SUPERUSER PASSWORD 'password';
 
 CREATE TABLE public.user_detail
 (
-    id       SERIAL PRIMARY KEY,
-    name     character varying(255) NOT NULL,
-    email    character varying(255) NOT NULL,
-    password character varying(255) NOT NULL,
-    address  text
+    id            SERIAL PRIMARY KEY,
+    name          character varying(255) NOT NULL,
+    email         character varying(255) NOT NULL,
+    password_salt character varying(255) NOT NULL,
+    password      character varying(255) NOT NULL,
+    address       text
 );
 
 ALTER TABLE public.user_detail
