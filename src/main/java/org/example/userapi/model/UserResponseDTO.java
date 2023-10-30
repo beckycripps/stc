@@ -11,7 +11,6 @@ import java.util.List;
 public class UserResponseDTO {
     private String name;
     private String email;
-    private String password;
     private String address;
     private List<DonationDTO> donationsDTO;
 }

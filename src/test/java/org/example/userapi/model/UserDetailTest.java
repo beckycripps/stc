@@ -36,7 +36,6 @@ public class UserDetailTest {
         // Assert
         assertNotNull(userResponseDTO);
         assertEquals("test@example.com", userResponseDTO.getEmail());
-        assertEquals("hashedPassword", userResponseDTO.getPassword());
         assertEquals("Name", userResponseDTO.getName());
         assertEquals("Address", userResponseDTO.getAddress());
         assertEquals(1, userResponseDTO.getDonationsDTO().size());

@@ -6,10 +6,10 @@ A brief description of your project goes here.
 
 To install this project, follow these steps:
 
-1. Clone the repository: `git clone https://github.com/your-username/your-project.git`
-2. Navigate to the project directory: `cd your-project`
+1. Clone the repository: `git clone https://github.com/beckycripps/stc.git`
+2. Navigate to the project directory.
 3. Build the project: `mvn clean install -U`
-4. Build the image: `docker build`
+4. Build the image: `docker build .`
 5. Run the container `docker-compose up`
 
 ## Usage

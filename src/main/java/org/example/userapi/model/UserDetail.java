@@ -39,7 +39,6 @@ public class UserDetail {
     public UserResponseDTO toDTO(List<Donation> donations) throws Exception {
         UserResponseDTO userResponseDTO = new UserResponseDTO();
         userResponseDTO.setEmail(this.getEmail());
-        userResponseDTO.setPassword(this.getPassword());
         userResponseDTO.setName(decrypt(this.getName()));
         userResponseDTO.setAddress(decrypt(this.getAddress()));
         // Decrypt each donation and map it to DTO
